@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrícolas Telnar S.A.S. - Productos Agrícolas de Alta Calidad</title>
+    <style>
+        /* Reset y estilos base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1A1006;
+            background-color: #fff;
+        }
+        
+        /* Variables de color */
+        :root {
+            --telnar-orange: #E05E24;
+            --telnar-green: #2D4134;
+            --telnar-dark: #1A1006;
+            --telnar-cream: #F5F0E1;
+        }
+        
+        /* Contenedor */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Encabezado */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid rgba(45, 65, 52, 0.2);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--telnar-dark);
+        }
+        
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            background-color: var(--telnar-orange);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .logo span {
+            margin-left: 15px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        /* Navegación */
+        .nav-desktop {
+            display: none;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-desktop {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+        
+        .nav-desktop a {
+            color: var(--telnar-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-desktop a:hover {
+            color: var(--telnar-orange);
+        }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background-color: var(--telnar-orange);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: rgba(224, 94, 36, 0.9);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Menú móvil */
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--telnar-dark);
+        }
+        
+        .mobile-menu {
+            display: none;
+            background-color: #fff;
+            border-top: 1px solid rgba(45, 65, 52, 0.2);
+            padding: 20px 0;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--telnar-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .mobile-menu a:hover {
+            color: var(--telnar-orange);
+        }
+        
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            color: #fff;
+            background-color: var(--telnar-dark);
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzJENDEzNCIvPjxwYXRoIGQ9Ik0wLDUwIEwxMjAwLDUwIEwxMjAwLDEwMCBMMCwxMDAgWiIgZmlsbD0iI0UwNUUyNCIgZmlsbC1vcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMCwxNTAgTDEyMDAsMTUwIEwxMjAwLDIwMCBMMCwyMDAgWiIgZmlsbD0iI0UwNUUyNCIgZmlsbC1vcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMCwyNTAgTDEyMDAsMjUwIEwxMjAwLDMwMCBMMCwzMDAgWiIgZmlsbD0iI0UwNUUyNCIgZmlsbC1vcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMCwzNTAgTDEyMDAsMzUwIEwxMjAwLDQwMCBMMCw0MDAgWiIgZmlsbD0iI0UwNUUyNCIgZmlsbC1vcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMCw0NTAgTDEyMDAsNDUwIEwxMjAwLDUwMCBMMCw1MDAgWiIgZmlsbD0iI0UwNUUyNCIgZmlsbC1vcGFjaXR5PSIwLjMiLz48L3N2Zz4=');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        /* Secciones */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Tarjetas */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            color: var(--telnar-orange);
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Productos */
+        .products {
+            background-color: #f9f9f9;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .product-image {
+            height: 250px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .product-content p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        /* Clientes */
+        .clients {
+            text-align: center;
+        }
+        
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .client-logo {
+            width: 120px;
+            height: 80px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            color: #333;
+            font-weight: bold;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+        }
+        
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial cite {
+            font-weight: 600;
+            display: block;
+            text-align: right;
+        }
+        
+        /* CTA */
+        .cta {
+            background-color: var(--telnar-dark);
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .cta h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--telnar-dark);
+            color: var(--telnar-cream);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: rgba(245, 240, 225, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--telnar-orange);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(45, 65, 52, 0.2);
+            color: rgba(245, 240, 225, 0.7);
+        }
+        
+        /* Tabs */
+        .tabs {
+            margin-bottom: 30px;
+        }
+        
+        .tabs-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .tab-trigger {
+            padding: 15px;
+            text-align: center;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .tab-trigger.active {
+            background-color: var(--telnar-orange);
+            color: #fff;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Características de producto */
+        .product-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .product-feature svg {
+            color: var(--telnar-orange);
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        /* Formulario de contacto */
+        .contact-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+        }
+        
+        .form-success {
+            background-color: rgba(224, 94, 36, 0.1);
+            border: 1px solid rgba(224, 94, 36, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Utilidades */
+        .grid-cols-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .grid-cols-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .space-y-2 > * + * {
+            margin-top: 10px;
+        }
+        
+        .space-y-4 > * + * {
+            margin-top: 20px;
+        }
+        
+        .mb-4 {
+            margin-bottom: 15px;
+        }
+        
+        .mr-2 {
+            margin-right: 10px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mensaje de previsualización -->
+    <div style="position: fixed; top: 0; left: 0; right: 0; background-color: #E05E24; color: white; text-align: center; padding: 10px; z-index: 1000; font-weight: bold;">
+        Previsualización - Haga clic en "Descargar Archivo HTML" para obtener su copia
+    </div>
+    
+    <!-- Ajustar el padding superior del header para acomodar el mensaje de previsualización -->
+    <style>
+        header {
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                margin-top: 60px;
+            }
+        }
+    </style>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#inicio" class="logo">
+                    <div class="logo-img">T</div>
+                    <span>Agrícolas Telnar S.A.S.</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#nosotros">Quiénes Somos</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#clientes">Clientes</a>
+                    <a href="#innovacion">Innovación</a>
+                    <a href="#sostenibilidad">Sostenibilidad</a>
+                    <a href="#contacto" class="btn">Contacto</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="menuBtn">☰</button>
+            </div>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Quiénes Somos</a>
+            <a href="#productos">Productos</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#innovacion">Innovación</a>
+            <a href="#sostenibilidad">Sostenibilidad</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Agrícolas Telnar S.A.S.</h1>
+                    <p>Calidad, Inocuidad y Compromiso Ambiental desde 2009</p>
+                    <div class="hero-buttons">
+                        <a href="#productos" class="btn">Ver Productos</a>
+                        <a href="#contacto" class="btn btn-outline">Contactar</a>
+                        <a href="#nosotros" class="btn btn-outline">Nuestra Misión</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen de la Empresa -->
+        <section class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Más de 15 años de excelencia agrícola</h2>
+                    <p>Desde 2009, Agrícolas Telnar S.A.S. ha sido sinónimo de calidad y confianza en el mercado agrícola colombiano. Nuestros productos frescos y procesados abastecen a clientes destacados como Buffalo Wings y Sándwich Qbano, gracias a nuestra constante innovación y compromiso con la calidad.</p>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"/><path d="M12 22V15.5"/><path d="M22 8.5L12 15.5L2 8.5"/><path d="M2 15.5L12 8.5L22 15.5"/><path d="M12 2V8.5"/></svg>
+                        </div>
+                        <h3>Sostenibilidad</h3>
+                        <p>Comprometidos con el medio ambiente, aprovechamos el 100% de nuestros residuos orgánicos y contamos con sistemas de recolección de agua.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Calidad Premium</h3>
+                        <p>Utilizamos tecnología alemana de punta y rigurosos controles de calidad para garantizar productos impecables en cada entrega.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </div>
+                        <h3>Innovación</h3>
+                        <p>Pioneros en productos congelados de alta calidad, ofrecemos mango y mora disponibles durante todo el año manteniendo su frescura original.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section id="productos" class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestros Productos Destacados</h2>
+                </div>
+
+                <div class="tabs">
+                    <div class="tabs-list">
+                        <div class="tab-trigger active" data-tab="frescos">Productos Frescos</div>
+                        <div class="tab-trigger" data-tab="procesados">Productos Procesados</div>
+                    </div>
+
+                    <div class="tab-content active" id="frescos">
+                        <div class="grid-cols-2">
+                            <div class="product-card">
+                                <div class="product-image">Vegetales Frescos</div>
+                                <div class="product-content">
+                                    <h3>Vegetales Frescos</h3>
+                                    <p>Selección de vegetales cultivados con los más altos estándares de calidad</p>
+                                    <div class="space-y-2">
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Control visual por canastas de colores</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Trazabilidad completa</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Entrega puntual garantizada</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-image">Frutas Frescas</div>
+                                <div class="product-content">
+                                    <h3>Frutas Frescas</h3>
+                                    <p>Frutas seleccionadas en su punto óptimo de maduración</p>
+                                    <div class="space-y-2">
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Selección manual cuidadosa</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Control de calidad riguroso</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Sabor y frescura garantizados</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="procesados">
+                        <div class="grid-cols-2">
+                            <div class="product-card">
+                                <div class="product-image">Mango Congelado</div>
+                                <div class="product-content">
+                                    <h3>Mango Congelado</h3>
+                                    <p>Mango congelado disponible todo el año con la misma calidad y frescura</p>
+                                    <div class="space-y-2">
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Proceso de congelación rápida</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Conserva nutrientes y sabor</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Disponible en diferentes cortes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-image">Mora Congelada</div>
+                                <div class="product-content">
+                                    <h3>Mora Congelada</h3>
+                                    <p>Mora congelada que mantiene todas sus propiedades durante todo el año</p>
+                                    <div class="space-y-2">
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Selección de las mejores moras</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Proceso IQF para preservar calidad</span>
+                                        </div>
+                                        <div class="product-feature">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                            <span>Sin aditivos ni conservantes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clientes -->
+        <section id="clientes" class="clients">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Clientes que Confían en Nosotros</h2>
+                </div>
+
+                <div class="client-logos">
+                    <div class="client-logo">Buffalo Wings</div>
+                    <div class="client-logo">Sándwich Qbano</div>
+                    <div class="client-logo">Sipote Burrito</div>
+                    <div class="client-logo">Dos del Alma</div>
+                </div>
+
+                <div class="testimonial">
+                    <p>"Confiamos en Telnar por su calidad constante y su compromiso con la entrega puntual de productos frescos. Su innovación en productos congelados nos ha permitido mantener la calidad durante todo el año."</p>
+                    <cite>— Cliente Destacado</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section id="nosotros" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Quiénes Somos</h2>
+                    <p>Conoce nuestra historia, misión, visión y los valores que nos han convertido en líderes del sector agrícola.</p>
+                </div>
+
+                <div class="grid-cols-2">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"/><path d="M12 22V15.5"/><path d="M22 8.5L12 15.5L2 8.5"/><path d="M2 15.5L12 8.5L22 15.5"/><path d="M12 2V8.5"/></svg>
+                        </div>
+                        <h3>Nuestra Misión</h3>
+                        <p>Proveer productos agrícolas frescos y procesados de la más alta calidad, garantizando la inocuidad alimentaria y promoviendo prácticas sostenibles que beneficien a nuestros clientes, colaboradores y al medio ambiente.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Nuestra Visión</h3>
+                        <p>Ser reconocidos como el proveedor líder de productos agrícolas en Colombia, destacándonos por nuestra innovación, calidad impecable y compromiso con la sostenibilidad, expandiendo nuestra presencia a nivel nacional e internacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovación -->
+        <section id="innovacion" class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Innovación</h2>
+                    <p>Tecnología y procesos de vanguardia para garantizar productos agrícolas de la más alta calidad.</p>
+                </div>
+
+                <div class="grid-cols-2">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        </div>
+                        <h3>Tecnología Alemana</h3>
+                        <p>Utilizamos maquinaria alemana de última generación para el procesamiento y conservación de nuestros productos, garantizando la máxima calidad y eficiencia.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                        </div>
+                        <h3>Sistema de Canastas de Colores</h3>
+                        <p>Implementamos un innovador sistema de control visual mediante canastas de diferentes colores que nos permite identificar rápidamente el tipo de producto y su destino.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sostenibilidad -->
+        <section id="sostenibilidad" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Sostenibilidad</h2>
+                    <p>Cultivando futuro, cosechando responsabilidad: nuestro compromiso con el medio ambiente y la sociedad.</p>
+                </div>
+
+                <div class="grid-cols-2">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </div>
+                        <h3>Gestión de Residuos</h3>
+                        <p>Aprovechamos el 100% de nuestros residuos orgánicos mediante un sistema de compostaje que genera abono de alta calidad para nuestros cultivos, cerrando el ciclo de producción de manera sostenible.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+                        </div>
+                        <h3>Gestión del Agua</h3>
+                        <p>Implementamos sistemas de recolección de agua lluvia y tecnología de medición de pH que nos permite optimizar el uso del agua en nuestros procesos, reduciendo significativamente nuestro consumo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contáctenos</h2>
+                    <p>Estamos aquí para responder a sus preguntas y ayudarle a encontrar los productos agrícolas perfectos para sus necesidades.</p>
+                </div>
+
+                <div class="grid-cols-2">
+                    <div>
+                        <h3 class="mb-4">Información de Contacto</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--telnar-orange);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>Cl. 37 Sur # 72L-77, Kennedy, Bogotá, Colombia</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--telnar-orange);"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+                                <span>+57 (123) 456-7890</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2" style="color: var(--telnar-orange);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <a href="mailto:info@telnar.com.co" style="color: var(--telnar-dark);">info@telnar.com.co</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="mb-4">Envíenos un Mensaje</h3>
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="button" class="btn" id="submitForm">Enviar Mensaje</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <h2>¿Necesita productos agrícolas premium?</h2>
+                <p>Descubra nuestra innovación en congelados: mango y mora disponibles todo el año con la misma calidad y frescura.</p>
+                <a href="#contacto" class="btn">Contáctenos Hoy</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Agrícolas Telnar S.A.S.</h3>
+                    <p style="color: rgba(245, 240, 225, 0.7); margin-bottom: 15px;">Calidad, Inocuidad y Compromiso Ambiental desde 2009</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Quiénes Somos</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#clientes">Clientes</a></li>
+                        <li><a href="#innovacion">Innovación</a></li>
+                        <li><a href="#sostenibilidad">Sostenibilidad</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Nuestros Productos</h3>
+                    <ul>
+                        <li><a href="#productos">Vegetales Frescos</a></li>
+                        <li><a href="#productos">Frutas Frescas</a></li>
+                        <li><a href="#productos">Mango Congelado</a></li>
+                        <li><a href="#productos">Mora Congelada</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Cl. 37 Sur # 72L-77, Kennedy, Bogotá, Colombia</li>
+                        <li>+57 (123) 456-7890</li>
+                        <li><a href="mailto:info@telnar.com.co">info@telnar.com.co</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Agrícolas Telnar S.A.S. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript incrustado -->
+    <script>
+        // Menú móvil
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Tabs de productos
+            const tabTriggers = document.querySelectorAll('.tab-trigger');
+            tabTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    // Desactivar todos los tabs
+                    tabTriggers.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Activar el tab seleccionado
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Formulario de contacto
+            const submitForm = document.getElementById('submitForm');
+            if (submitForm) {
+                submitForm.addEventListener('click', function() {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    if (name && email && message) {
+                        // En un entorno real, aquí enviaríamos los datos al servidor
+                        // Para esta demo, simplemente mostramos un mensaje de éxito
+                        const form = document.querySelector('.contact-form');
+                        form.innerHTML = `
+                            <div class="form-success">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+                                <h3 class="mb-4">¡Mensaje Enviado!</h3>
+                                <p>Gracias por contactarnos. Nos pondremos en contacto con usted lo antes posible.</p>
+                            </div>
+                        `;
+                    } else {
+                        alert('Por favor complete todos los campos requeridos.');
+                    }
+                });
+            }
+            
+            // Año actual en el footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Scroll suave para los enlaces de anclaje
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Ajuste para el header fijo
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

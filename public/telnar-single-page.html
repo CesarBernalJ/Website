@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrícolas Telnar S.A.S. - Versión Compartible</title>
+    <style>
+        /* Estilos básicos incorporados */
+        :root {
+            --color-orange: #E05E24;
+            --color-green: #2D4134;
+            --color-dark: #1A1006;
+            --color-cream: #F5F0E1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: #fff;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid rgba(45, 65, 52, 0.2);
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 60px;
+            height: auto;
+        }
+        
+        .logo span {
+            margin-left: 15px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .hero {
+            background-color: var(--color-dark);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            color: var(--color-orange);
+        }
+        
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .products {
+            background-color: #f9f9f9;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .product-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .product-content p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .clients {
+            text-align: center;
+        }
+        
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .client-logo {
+            width: 120px;
+            height: 80px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+        }
+        
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial cite {
+            font-weight: 600;
+            display: block;
+            text-align: right;
+        }
+        
+        .cta {
+            background-color: var(--color-dark);
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .cta h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--color-orange);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: rgba(224, 94, 36, 0.9);
+        }
+        
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-cream);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: rgba(245, 240, 225, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--color-orange);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(45, 65, 52, 0.2);
+            color: rgba(245, 240, 225, 0.7);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/png;base64,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" alt="Telnar Logo">
+                    <span>Agrícolas Telnar S.A.S.</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Agrícolas Telnar S.A.S.</h1>
+            <p>Calidad, Inocuidad y Compromiso Ambiental desde 2009</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Más de 15 años de excelencia agrícola</h2>
+                <p>Desde 2009, Agrícolas Telnar S.A.S. ha sido sinónimo de calidad y confianza en el mercado agrícola colombiano. Nuestros productos frescos y procesados abastecen a clientes destacados como Buffalo Wings y Sándwich Qbano, gracias a nuestra constante innovación y compromiso con la calidad.</p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"/><path d="M12 22V15.5"/><path d="M22 8.5L12 15.5L2 8.5"/><path d="M2 15.5L12 8.5L22 15.5"/><path d="M12 2V8.5"/></svg>
+                    </div>
+                    <h3>Sostenibilidad</h3>
+                    <p>Comprometidos con el medio ambiente, aprovechamos el 100% de nuestros residuos orgánicos y contamos con sistemas de recolección de agua.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Calidad Premium</h3>
+                    <p>Utilizamos tecnología alemana de punta y rigurosos controles de calidad para garantizar productos impecables en cada entrega.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <h3>Innovación</h3>
+                    <p>Pioneros en productos congelados de alta calidad, ofrecemos mango y mora disponibles durante todo el año manteniendo su frescura original.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Productos Destacados</h2>
+            </div>
+
+            <div class="cards">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCADIAMgDASIAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAAAwABAgQFBgf/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/2gAMAwEAAhADEAAAAfSQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQ
+
